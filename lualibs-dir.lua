@@ -473,7 +473,7 @@ if onwindows then
                 pth = pth .. "/" .. s
             end
             if make_indeed and not isdir(pth) then
-                mkdir(pth)
+                mkdir(pth .. '/')
             end
         end
         return pth, (isdir(pth) == true)
@@ -525,7 +525,7 @@ else
                     pth = pth .. "/" .. s
                 end
                 if make_indeed and not first and not isdir(pth) then
-                    mkdir(pth)
+                    mkdir(pth .. '/')
                 end
             end
         else
@@ -533,7 +533,7 @@ else
             for s in gmatch(str,"[^/]+") do
                 pth = pth .. "/" .. s
                 if make_indeed and not isdir(pth) then
-                    mkdir(pth)
+                    mkdir(pth .. '/')
                 end
             end
         end
