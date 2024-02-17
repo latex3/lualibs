@@ -21,6 +21,7 @@ copy and rename new files (must be done manually as far as I can see)
 - Add version info to NEWS
 - Enable unicode in lualibs-unicode (until we remove the dependency ...)
 - Disable outer return statements in lualibs-util-jsn and lualibs-util-zip
+- In `lualibs-dir.lua`, replace all `mkdir(pth)` with `mkdir(pth .. '/')`.
 
 
 ## Step 4
