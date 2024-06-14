@@ -12,7 +12,7 @@ if not modules then modules = { } end modules ['l-unicode'] = {
 
 -- in lua 5.3:
 
--- utf8.char(···)         : concatinated
+-- utf8.char(···)         : concatenated
 -- utf8.charpatt          : "[\0-\x7F\xC2-\xF4][\x80-\xBF]*"
 -- utf8.codes(s)          : for p, c in utf8.codes(s) do body end
 -- utf8.codepoint(s [, i [, j]])
@@ -679,7 +679,7 @@ end
 -- 3  FF FE 00 00   UTF-32-little-endian
 -- 4  00 00 FE FF   UTF-32-big-endian
 --
--- \000 fails in <= 5.0 but is valid in >=5.1 where %z is depricated
+-- \000 fails in <= 5.0 but is valid in >=5.1 where %z is deprecated
 
 -- utf.name = {
 --     [0] = 'utf-8',
@@ -694,11 +694,11 @@ end
 --     if not str then
 --         f:seek('set')
 --         return 0
---  -- elseif find(str,"^%z%z\254\255") then            -- depricated
+--  -- elseif find(str,"^%z%z\254\255") then            -- deprecated
 --  -- elseif find(str,"^\000\000\254\255") then        -- not permitted and bugged
 --     elseif find(str,"\000\000\254\255",1,true) then  -- seems to work okay (TH)
 --         return 4
---  -- elseif find(str,"^\255\254%z%z") then            -- depricated
+--  -- elseif find(str,"^\255\254%z%z") then            -- deprecated
 --  -- elseif find(str,"^\255\254\000\000") then        -- not permitted and bugged
 --     elseif find(str,"\255\254\000\000",1,true) then  -- seems to work okay (TH)
 --         return 3

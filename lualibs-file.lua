@@ -390,8 +390,8 @@ else
 
 end
 
-file.isreadable = file.is_readable -- depricated
-file.iswritable = file.is_writable -- depricated
+file.isreadable = file.is_readable -- deprecated
+file.iswritable = file.is_writable -- deprecated
 
 function file.size(name)
     if name then
@@ -423,7 +423,7 @@ local deslasher = lpeg.replacer(S("\\/")^1,"/")
 -- If we have a network or prefix then there is a change that we end up with two
 -- // in the middle ... we could prevent this if we (1) expand prefixes: and (2)
 -- split and rebuild as url. Of course we could assume no network paths (which
--- makes sense) adn assume either mapped drives (windows) or mounts (unix) but
+-- makes sense) and assume either mapped drives (windows) or mounts (unix) but
 -- then we still have to deal with urls ... anyhow, multiple // are never a real
 -- problem but just ugly.
 
@@ -718,7 +718,7 @@ function lfs.mkdirs(path)
     end
 end
 
--- here is oen i ran into when messign around with xavante code (keppler project)
+-- here is one i ran into when messing around with xavante code (keppler project)
 -- where it's called in_base .. no gain in using lpeg here
 
 function file.withinbase(path) -- don't go beyond root

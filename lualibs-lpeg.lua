@@ -7,7 +7,7 @@ if not modules then modules = { } end modules ['l-lpeg'] = {
 }
 
 -- we can get too many captures (e.g. on largexml files) which makes me wonder
--- if P(foo)/"" can't be simplfied to N(foo) i.e. some direct instruction to the
+-- if P(foo)/"" can't be simplified to N(foo) i.e. some direct instruction to the
 -- lpeg virtual machine to ignore it
 
 -- lpeg 12 vs lpeg 10: slower compilation, similar parsing speed (i need to check
@@ -30,7 +30,7 @@ lpeg = require("lpeg") -- does lpeg register itself global?
 local lpeg = lpeg
 
 -- The latest lpeg doesn't have print any more, and even the new ones are not
--- available by default (only when debug mode is enabled), which is a pitty as
+-- available by default (only when debug mode is enabled), which is a pity as
 -- as it helps nailing down bottlenecks. Performance seems comparable: some 10%
 -- slower pattern compilation, same parsing speed, although,
 --
@@ -336,7 +336,7 @@ function lpeg.tsplitter(pattern, action)
     end
 end
 
--- probleem: separator can be lpeg and that does not hash too well, but
+-- problem: separator can be lpeg and that does not hash too well, but
 -- it's quite okay as the key is then not garbage collected
 
 local splitters_s, splitters_m, splitters_t = { }, { }, { }

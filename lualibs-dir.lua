@@ -90,7 +90,7 @@ function dir.current()
     return (gsub(currentdir(),"\\","/"))
 end
 
--- The next one is somewhat optimized but still slow but it's a pitty that the iterator
+-- The next one is somewhat optimized but still slow but it's a pity that the iterator
 -- doesn't return a mode too.
 
 local function glob_pattern_function(path,patt,recurse,action)
@@ -665,7 +665,7 @@ local function found(...) -- can have nil entries
                 return path
             end
         elseif kind == "table" then
-            -- here we asume no holes, i.e. an indexed table
+            -- here we assume no holes, i.e. an indexed table
             local path = found(unpack(path))
             if path then
                 return path

@@ -128,7 +128,7 @@ end
 
 -- package:
 
--- if not package.seachers then
+-- if not package.searchers then
 --
 --     package.searchers = package.loaders -- 5.2
 --

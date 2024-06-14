@@ -361,7 +361,7 @@ end
 -- to use the formatter when a (somewhat) complex format is used a lot. Each formatter
 -- is a function so there is some overhead and not all formatted output is worth that
 -- overhead. Keep in mind that there is an extra function call involved. In principle
--- we end up with a string concatination so one could inline such a sequence but often
+-- we end up with a string concatenation so one could inline such a sequence but often
 -- at the cost of less readabinity. So, it's a sort of (visual) compromise. Of course
 -- there is the benefit of more variants. (Concerning the speed: a simple format like
 -- %05fpt is better off with format than with a formatter, but as soon as you put

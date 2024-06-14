@@ -555,7 +555,7 @@ if xzip then -- flate then do
         writecardinal4(f,start)        -- dir offset
         if type(comment) == "string" and comment ~= "" then
             writecardinal2(f,#comment) -- comment length
-            f:write(comment)           -- comemnt
+            f:write(comment)           -- comment
         else
             writecardinal2(f,0)
         end

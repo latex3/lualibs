@@ -316,7 +316,7 @@ do
 
         -- There is no way to detect if musl is used because there is no __MUSL__
         -- and it looks like there never will be. Folks don't care about cases where
-        -- one ships multipe binaries (as with TeX distibutions) and want to select
+        -- one ships multiple binaries (as with TeX distributions) and want to select
         -- the right one. So probably it expects users to compile locally in which
         -- case we don't care to much as they can then sort it out.
 
