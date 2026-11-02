@@ -106,11 +106,11 @@ function file.loadchecksum(name)
     return nil
 end
 
-function file.savechecksum(name,checksum)
-    if not checksum then checksum = checksum(name) end
-    if checksum then
-        savedata(name .. ".md5",checksum)
-        return checksum
+function file.savechecksum(name,filechecksum)
+    if not filechecksum then filechecksum = checksum(name) end
+    if filechecksum then
+        savedata(name .. ".md5",filechecksum)
+        return filechecksum
     end
     return nil
 end
